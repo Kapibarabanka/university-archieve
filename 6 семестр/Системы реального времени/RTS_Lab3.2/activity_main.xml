@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            android:id="@+id/mainLayout">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headersColumn"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/x1Column" android:gravity="center">
+            <TextView
+                    android:text="A"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/aLabel"
+                    android:textSize="16sp"
+                    android:gravity="center|right"
+                    tools:layout_editor_absoluteY="56dp" tools:layout_editor_absoluteX="27dp"/>
+            <TextView
+                    android:text="B"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/bLabel"
+                    android:textSize="16sp"
+                    android:gravity="center|right"
+                    tools:layout_editor_absoluteY="104dp" tools:layout_editor_absoluteX="27dp"/>
+            <TextView
+                    android:text="C"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/cLabel"
+                    android:textSize="16sp"
+                    android:gravity="center|right"
+                    tools:layout_editor_absoluteY="152dp" tools:layout_editor_absoluteX="27dp"/>
+            <TextView
+                    android:text="D"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/dLabel"
+                    android:textSize="16sp"
+                    android:gravity="center|right"
+                    tools:layout_editor_absoluteY="200dp" tools:layout_editor_absoluteX="27dp"/>
+            <TextView
+                    android:text="Weights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/weightsLabel" android:textSize="16sp"
+                    android:gravity="center|right"
+                    tools:layout_editor_absoluteY="248dp" tools:layout_editor_absoluteX="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/x1Column" android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" app:layout_constraintStart_toEndOf="@+id/headersColumn"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                    android:text="X1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/x1Label"
+                    android:gravity="center"
+                    tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="75dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/aX1"
+                    android:textSize="16sp"
+                    android:gravity="center" android:text="0" android:hint="0"
+                    android:tag="@{@stringArray/pointsPrefixes[0] + @string/X1}"
+                    tools:layout_editor_absoluteY="56dp" tools:layout_editor_absoluteX="75dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/bX1"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:tag="@{@stringArray/pointsPrefixes[1] + @string/X1}"
+                    android:text="1" android:hint="1" tools:layout_editor_absoluteY="104dp"
+                    tools:layout_editor_absoluteX="75dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/cX1"
+                    android:hint="3" android:textSize="16sp"
+                    android:gravity="center"
+                    android:tag="@{@stringArray/pointsPrefixes[2] + @string/X1}"
+                    android:text="3" tools:layout_editor_absoluteY="152dp" tools:layout_editor_absoluteX="75dp"/>
+            <EditText
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/dX1"
+                    android:hint="2" android:textSize="16sp"
+                    android:tag="@{@stringArray/pointsPrefixes[3] + @string/X1}"
+                    android:gravity="center"
+                    android:text="2" tools:layout_editor_absoluteY="152dp" tools:layout_editor_absoluteX="75dp"/>
+            <EditText
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/weightX1"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:tag="@{@string/weightPrefix + @string/X1}"
+                    tools:layout_editor_absoluteY="152dp" tools:layout_editor_absoluteX="75dp"
+                    android:enabled="false"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/x2Column"
+                android:layout_marginLeft="21dp" android:layout_marginStart="21dp"
+                app:layout_constraintStart_toEndOf="@+id/x1Column" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:gravity="center">
+            <TextView
+                    android:text="X2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/x2Label"
+                    android:gravity="center"
+                    tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="123dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/aX2"
+                    android:textSize="16sp"
+                    android:tag="@{@stringArray/pointsPrefixes[0] + @string/X2}"
+                    android:gravity="center"
+                    android:text="6" android:hint="6"
+                    tools:layout_editor_absoluteY="56dp" tools:layout_editor_absoluteX="124dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/bX2"
+                    android:hint="5"
+                    android:tag="@{@stringArray/pointsPrefixes[1] + @string/X2}"
+                    android:textSize="16sp" android:gravity="center"
+                    android:text="5" tools:layout_editor_absoluteY="104dp" tools:layout_editor_absoluteX="124dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/cX2"
+                    android:hint="3"
+                    android:tag="@{@stringArray/pointsPrefixes[2] + @string/X2}"
+                    android:textSize="16sp" android:gravity="center"
+                    android:text="3" tools:layout_editor_absoluteY="152dp" tools:layout_editor_absoluteX="124dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/dX2"
+                    android:hint="4"
+                    android:tag="@{@stringArray/pointsPrefixes[3] + @string/X2}"
+                    android:textSize="16sp" android:gravity="center"
+                    android:text="4" tools:layout_editor_absoluteY="200dp" tools:layout_editor_absoluteX="124dp"/>
+            <EditText
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:tag="@{@string/weightPrefix + @string/X2}"
+                    android:id="@+id/weightX2" android:enabled="false" android:gravity="center"
+                    android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expectedColumn" android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" app:layout_constraintStart_toEndOf="@+id/x2Column"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                    android:text="Expected class\n(0 or 1)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/expLabel"
+                    android:gravity="center"
+                    tools:layout_editor_absoluteX="191dp" tools:layout_editor_absoluteY="8dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/aExp"
+                    android:textSize="16sp"
+                    android:tag="@{@stringArray/pointsPrefixes[0] + @string/Exp}"
+                    android:gravity="center" android:text="0" android:hint="0"
+                    tools:layout_editor_absoluteX="245dp" tools:layout_editor_absoluteY="56dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/bExp"
+                    android:textSize="16sp"
+                    android:tag="@{@stringArray/pointsPrefixes[1] + @string/Exp}"
+                    android:gravity="center" android:text="1" android:hint="1"
+                    tools:layout_editor_absoluteX="245dp" tools:layout_editor_absoluteY="104dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/cExp"
+                    android:textSize="16sp"
+                    android:tag="@{@stringArray/pointsPrefixes[2] + @string/Exp}"
+                    android:gravity="center" android:text="0" android:hint="0"
+                    tools:layout_editor_absoluteY="152dp" tools:layout_editor_absoluteX="245dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/dExp"
+                    android:textSize="16sp"
+                    android:tag="@{@stringArray/pointsPrefixes[3] + @string/Exp}"
+                    android:gravity="center" android:text="1" android:hint="1"
+                    tools:layout_editor_absoluteY="200dp" tools:layout_editor_absoluteX="245dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/actualColumn" android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" android:layout_marginLeft="21dp"
+                android:layout_marginStart="21dp" app:layout_constraintStart_toEndOf="@+id/expectedColumn"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="1.0">
+            <TextView
+                    android:text="Actual class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/actLabel"
+                    android:gravity="center"
+                    tools:layout_editor_absoluteX="304dp" tools:layout_editor_absoluteY="16dp"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/aAct"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:tag="@{@stringArray/pointsPrefixes[0] + @string/Act}"
+                    tools:layout_editor_absoluteX="294dp" tools:layout_editor_absoluteY="152dp"
+                    android:enabled="false"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/bAct"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:tag="@{@stringArray/pointsPrefixes[1] + @string/Act}"
+                    tools:layout_editor_absoluteX="294dp" tools:layout_editor_absoluteY="56dp"
+                    android:enabled="false"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/cAct"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:tag="@{@stringArray/pointsPrefixes[2] + @string/Act}"
+                    tools:layout_editor_absoluteX="294dp" tools:layout_editor_absoluteY="200dp"
+                    android:enabled="false"/>
+            <EditText
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/ax9"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:tag="@{@stringArray/pointsPrefixes[3] + @string/Act}"
+                    tools:layout_editor_absoluteY="104dp" tools:layout_editor_absoluteX="294dp"
+                    android:enabled="false"/>
+        </LinearLayout>
+        <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/x2Column" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:id="@+id/tableLayout">
+
+            <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:text="P"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp" android:id="@+id/thresholdLabel" android:gravity="center|right"
+                        android:textSize="16sp"/>
+                <EditText
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/thresholdText" android:textSize="16sp" android:text="4" android:hint="4"
+                        android:gravity="center"/>
+            </TableRow>
+            <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:text="Speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp" android:id="@+id/speedLabel" android:textSize="16sp"/>
+                <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/speedSpinner" android:spinnerMode="dropdown"
+                        android:entries="@array/speeds" android:gravity="center"/>
+            </TableRow>
+        </TableLayout>
+        <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" tools:layout_editor_absoluteX="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView" android:id="@+id/radioGroup2" android:gravity="center">
+            <RadioButton
+                    android:text="Seconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/secondsButton" android:layout_weight="1"
+                    android:textSize="16sp" android:gravity="center"/>
+            <RadioButton
+                    android:text="Iterations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/iterationsButton"
+                    android:layout_weight="1"
+                    android:textSize="16sp" android:checked="true" android:gravity="center"/>
+        </RadioGroup>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="395dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/DeadlineColumns"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
+            <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/secondsSpinner" android:layout_weight="1"
+                    android:entries="@array/seconds"/>
+            <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/iterationsSpinner" android:layout_weight="1"
+                    android:entries="@array/iterations"/>
+        </LinearLayout>
+        <TextView
+                android:text="Stop training after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:textSize="16sp"/>
+        <Button
+                android:text="TRAIN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trainButton"
+                android:onClick="onTrainClicked"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/DeadlineColumns" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"/>
+        <Button
+                android:text="Clean weights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/trainButton" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:onClick="onCleanClicked"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

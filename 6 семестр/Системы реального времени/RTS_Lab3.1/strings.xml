@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RTS_Lab3_1</string>
+    <string name="enter_the_number">Enter the number</string>
+    <string name="result">%d = %d * %d</string>
+</resources>

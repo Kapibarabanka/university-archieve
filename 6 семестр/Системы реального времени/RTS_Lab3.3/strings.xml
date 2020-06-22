@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RTS_Lab3_3</string>
+    <string name="solvingTime">The most optimal solution was get in %.4f seconds, %d iterations with  %d\%% of mutations</string>
+</resources>

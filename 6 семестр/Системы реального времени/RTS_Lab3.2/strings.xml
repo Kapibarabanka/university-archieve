@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">RTS_Lab3_2</string>
+    <string name="Act">Act</string>
+    <string name="Exp">Exp</string>
+    <string name="X1">X1</string>
+    <string name="X2">X2</string>
+    <string-array name="pointsPrefixes">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+    </string-array>
+    <string name="weightPrefix">weight</string>
+    <string-array name="speeds">
+        <item>0.001</item>
+        <item>0.01</item>
+        <item>0.05</item>
+        <item>0.1</item>
+        <item>0.2</item>
+        <item>0.3</item>
+    </string-array>
+    <string-array name="seconds">
+        <item>0.5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="iterations">
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+    <string name="trainingTime">Training time is %.4f seconds</string>
+</resources>
